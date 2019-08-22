@@ -3,7 +3,7 @@
 
 ## Download Aquila_stLFR v1.1:
 ```
-git clone https://github.com/maiziex/Aquila_stLFR.git
+conda install aquila_stlfr
 ```
 
 ## Dependencies:

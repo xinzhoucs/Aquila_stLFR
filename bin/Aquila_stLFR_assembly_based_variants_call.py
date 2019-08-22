@@ -83,7 +83,7 @@ def get_var(hap_paf_sorted,hap_var_txt,xin):
     Popen(use_cmd,shell=True).wait()
     
 
-def assembly_based_variants_call_paf(chr_start,chr_end,ref_file):
+def assembly_based_variants_call_paf(chr_start,chr_end,ref_file,in_dir,out_dir):
     for chr_num in range(chr_start,chr_end + 1):
         hap1_file = in_dir + "Aquila_Contig_chr" + str(chr_num) + "_hp1.fasta"
         hap2_file = in_dir + "Aquila_Contig_chr" + str(chr_num) + "_hp2.fasta"
@@ -100,7 +100,7 @@ def assembly_based_variants_call_paf(chr_start,chr_end,ref_file):
     print("all done~")
 
 
-def assembly_based_variants_call_sort(chr_start,chr_end):
+def assembly_based_variants_call_sort(chr_start,chr_end,out_dir):
     for chr_num in range(chr_start,chr_end + 1):
         hap1_paf = out_dir + "Aquila_Contig_chr" + str(chr_num) + "_hp1.paf"
         hap2_paf = out_dir + "Aquila_Contig_chr" + str(chr_num) + "_hp2.paf"
@@ -117,7 +117,7 @@ def assembly_based_variants_call_sort(chr_start,chr_end):
     print("all done~")
  
 
-def assembly_based_variants_call(chr_start,chr_end):
+def assembly_based_variants_call(chr_start,chr_end,out_dir):
     for chr_num in range(chr_start,chr_end + 1):
         hap1_paf_sorted = out_dir + "Aquila_Contig_chr" + str(chr_num) + "_hp1.paf.sorted"
         hap2_paf_sorted = out_dir + "Aquila_Contig_chr" + str(chr_num) + "_hp2.paf.sorted"
@@ -272,9 +272,9 @@ def main():
         in_dir = args.assembly_dir + "/" + "Assembly_Contigs_files/"  
         ref_file = args.ref_file
         Split_haplotype(chr_start,chr_end,in_dir)
-        assembly_based_variants_call_paf(chr_start,chr_end,ref_file)
-        assembly_based_variants_call_sort(chr_start,chr_end)
-        assembly_based_variants_call(chr_start,chr_end)
+        assembly_based_variants_call_paf(chr_start,chr_end,ref_file,in_dir,out_dir)
+        assembly_based_variants_call_sort(chr_start,chr_end,out_dir)
+        assembly_based_variants_call(chr_start,chr_end,out_dir)
         Call_SNV_info_from_contigs(chr_start,chr_end,out_dir,num_of_threads)
         Call_SV_del_from_contigs(chr_start,chr_end,out_dir,num_of_threads,v_size)
         Call_SV_ins_from_contigs(chr_start,chr_end,out_dir,num_of_threads,v_size)

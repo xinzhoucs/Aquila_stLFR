@@ -40,7 +40,7 @@ def merge_paired_reads(read1_file,read2_file,out_file):
     fw.close()
 
 
-if __name__ == "__main__":
+def main():
     if len(sys.argv) == 1:
         Popen("python3 " + "Aquila_stLFR_fastq_preprocess.py -h",shell=True).wait()
     else:
@@ -48,3 +48,8 @@ if __name__ == "__main__":
         fastq_2 = args.fastq_2    
         out_file = args.out_file  
         merge_paired_reads(fastq_1,fastq_2,out_file)
+
+
+if __name__ == "__main__":
+    main()
+
