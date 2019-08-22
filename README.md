@@ -12,6 +12,7 @@ Or you could just run "./install.sh" to check their availability and install the
 
 ## Install:
 ```
+git clone https://github.com/maiziex/Aquila_stLFR.git
 cd Aquila_stLFR
 chmod +x install.sh
 ./install.sh
