@@ -1,7 +1,7 @@
 # :milky_way: Aquila_stLFR :eagle: 
 
 
-## Download Aquila_stLFR v1.1:
+## Download Aquila_stLFR v1.1 through Bioconda:
 ```
 conda install aquila_stlfr
 ```
