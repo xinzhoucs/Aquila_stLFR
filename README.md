@@ -1,6 +1,6 @@
 # :milky_way: Aquila_stLFR :eagle: 
-
-## Install Aquila_stLFR v1.1 through Bioconda:
+[![BioConda Install](https://img.shields.io/conda/dn/bioconda/aquila_stlfr.svg?style=flag&label=BioConda%20install)](https://anaconda.org/bioconda/aquila_stlfr)
+## Install through Bioconda:
 ```
 conda install aquila_stlfr
 ```
