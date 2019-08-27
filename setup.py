@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages, Extension
 
 setup(name='aquila_stlfr',
-      version='1.2.9',
+      version='1.1.0',
       description='assembly and variant calling for stlfr and hybrid assembler for linked-reads',
       author='XinZhou',
       author_email='xzhou15@cs.stanford.edu',
