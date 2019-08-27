@@ -6,6 +6,17 @@ conda install aquila_stlfr
 ```
 (Please ensure <a href="https://bioconda.github.io/user/install.html#set-up-channels">channels</a> are properly setup for bioconda before installing) 
 
+```
+Aquila_stLFR_step1 --help
+Aquila_stLFR_step2 --help
+Aquila_stLFR_clean --help
+Aquila_step1_hybrid --help
+Aquila_stLFR_assembly_based_variants_call --help
+Aquila_stLFR_phasing_all_variants --help
+Aquila_step0_sortbam_hybrid --help
+Aquila_stLFR_fastq_preprocess --help
+```
+
 ## Dependencies:
 Aquila_stLFR utilizes <a href="https://www.python.org/downloads/">Python3 (+ numpy, pysam, and scipy)</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://github.com/lh3/minimap2">minimap2</a>. To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable (".bashrc"). <br />
 Or you could just run "./install.sh" to check their availability and install them if not, but make sure you have installed "python3", "conda" and "wget" first. 
