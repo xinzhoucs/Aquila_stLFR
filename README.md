@@ -159,9 +159,16 @@ Aquila_stLFR/bin/Aquila_stLFR_clean.py --out_dir Assembly_results_S12878
 
 ## Aquila assembly for other version of human referece: hg19
 ##### 1. Download hg19 reference from <a href="https://support.10xgenomics.com/genome-exome/software/downloads/latest">10x Genomics website</a>
-##### 2. Download hg19 "Uniqness_map" folder by wget using the link
+##### 2. Download resource folder by wget using these link
 ```
+#Download hg19 "Uniqness_map"
 wget http://xinzhouneuroscience.org/wp-content/uploads/2019/06/Uniqness_map_hg19.tar.gz 
+
+#Download the reference file (GRCh38)
+wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/source.tar.gz
+
+#Download hg19 "Uniqness_map"
+wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/Uniqness_map.tar.gz
 ```
 ##### If you want to run Aquila for other diploid species with high quality reference genomes, to generate "Uniqness_map" for Aquila, check the details of  <a href="https://bismap.hoffmanlab.org/">hoffmanMappability</a> to get the corresponding "k100.umap.bed.gz", then run "Aquila/bin/Get_uniqnessmap_for_Aquila.py" to get the final "Uniqness_map" folder to run Aquila.
 ##### Or you can use our "Aquila_uniqmap" to generate the "Uniqness_map" folder to run Aquila, check <a href="https://github.com/maiziex/Aquila/blob/master/src/How_to_get_uniqmap_folder.md">How_to_get_Umap</a> for details.
