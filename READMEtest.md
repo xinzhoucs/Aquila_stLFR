@@ -10,7 +10,7 @@ conda install aquila_stlfr
 
 #### Run the following commands to download source files:
 ```
-#Download the reference file (GRCh38)
+#Download hg38 reference file
 wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/source.tar.gz
 
 #Download hg38 "Uniqness_map"
@@ -31,7 +31,9 @@ chmod +x install.sh
 ### source folder:
 After running "./install.sh", a folder "source" would be download, it includes human GRCh38 reference fasta file, or you could also just download it by yourself from the corresponding official websites. 
 
-
+# Running The Code:
+## 1.For Bioconda user:
+Run the following commands to read the detailed instruction or refer to Github user instruction (section below) for further information.
 ```
 Aquila_stLFR_step1 --help
 Aquila_stLFR_step2 --help
@@ -42,12 +44,7 @@ Aquila_stLFR_phasing_all_variants --help
 Aquila_step0_sortbam_hybrid --help
 Aquila_stLFR_fastq_preprocess --help
 ```
-
-#  Github:
-
-
-
-## Running The Code:
+## 2.For Github user:
 Put the "Aquila_stLFR/bin" in the ".bashrc" file, and source the ".bashrc" file <br />
 Or just use the fullpath of "**Aquila_stLFR_step1.py**" and "**Aquila_stLFR_step2.py**"
 
