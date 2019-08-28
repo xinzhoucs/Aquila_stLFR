@@ -39,24 +39,31 @@ Run the following commands to read the detailed instruction or refer to Github u
 ```
 Aquila_stLFR_step1 --help
 ```
+[Step2](#step2)
 ```
 Aquila_stLFR_step2 --help
 ```
+[clean](#clean)
 ```
 Aquila_stLFR_clean --help
 ```
+[Step1_Hybrid](#step1_hybrid)
 ```
 Aquila_step1_hybrid --help
 ```
+[Assembly_based_variants_call](#assemblebvc)
 ```
 Aquila_stLFR_assembly_based_variants_call --help
 ```
+[Step1](#step1)
 ```
 Aquila_stLFR_phasing_all_variants --help
 ```
+[Step1](#step1)
 ```
 Aquila_step0_sortbam_hybrid --help
 ```
+[Step1](#step1)
 ```
 Aquila_stLFR_fastq_preprocess --help
 ```
@@ -64,8 +71,7 @@ Aquila_stLFR_fastq_preprocess --help
 Put the "Aquila_stLFR/bin" in the ".bashrc" file, and source the ".bashrc" file <br />
 Or just use the fullpath of "**Aquila_stLFR_step1.py**" and "**Aquila_stLFR_step2.py**"
 
-<a id="step1"></a>
-### Step 1: 
+### Step 1: <a id="step1"></a>
 ```
 Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S12878.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila_stLFR/Uniqness_map
 ```
@@ -107,7 +113,7 @@ Coverage | Memory| Time for chr21 on a single node |
 
 
 
-### Step 2: 
+### Step 2: <a id="step2"></a>
 ```
 Aquila_stLFR/bin/Aquila_stLFR_step2.py --out_dir Assembly_results_S12878 --num_threads 30 --reference Aquila_stLFR/source/ref.fa
 ```
@@ -175,7 +181,7 @@ Assembly_results_S12878
 ## Final Output Format:
 Aquila_stLFR outputs an overall contig file “Aquila_Contig_chr*.fasta” for each chromosome, and one contig file for each haplotype: “Aquila_Contig_chr*_hp1.fasta” and “Aquila_Contig_chr*_hp2.fasta”. For each contig, the header, for an instance, “>36_PS39049620:39149620_hp1” includes contig number “36”, phase block start coordinate “39049620”, phase block end coordinate “39149620”, and haplotype number “1”. Within the same phase block, the haplotype number “hp1” and “hp2” are arbitrary for maternal and paternal haplotypes. For some contigs from large phase blocks, the headers are much longer and complex, for an instance, “>56432_PS176969599:181582362_hp1_ merge177969599:178064599_hp1-177869599:177969599_hp1”. “56” denotes contig number, “176969599” denotes the start coordinate of the final big phase block, “181582362” denotes the end coordinate of the final big phase block, and “hp1” denotes the haplotype “1”. “177969599:178064599_hp1” and “177869599:177969599_hp1” mean that this contig is concatenated from minicontigs in small chunk (start coordinate: 177969599, end coordinate: 178064599, and haplotype: 1) and small chunk (start coordinate: 177869599, end coordinate: 177969599, and haplotype: 1). 
 
-### Clean Data
+### Clean Data <a id="clean"></a>
 ##### If your hard drive storage is limited, it is suggested to quily clean some data by running "Aquila_stLFR_clean.py". Or you can keep them for some analysis (check the above output directory tree for details). 
 ```
 Aquila_stLFR/bin/Aquila_stLFR_clean.py --out_dir Assembly_results_S12878 
