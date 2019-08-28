@@ -64,8 +64,8 @@ Aquila_stLFR_fastq_preprocess --help
 Put the "Aquila_stLFR/bin" in the ".bashrc" file, and source the ".bashrc" file <br />
 Or just use the fullpath of "**Aquila_stLFR_step1.py**" and "**Aquila_stLFR_step2.py**"
 
-
-### Step 1: <a id="step1"></a> 
+<a id="step1"></a>
+### Step 1: 
 ```
 Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S12878.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila_stLFR/Uniqness_map
 ```
