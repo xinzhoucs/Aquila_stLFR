@@ -2,11 +2,13 @@
 [![BioConda Install](https://img.shields.io/conda/dn/bioconda/aquila_stlfr.svg?style=flag&label=BioConda%20install)](https://anaconda.org/bioconda/aquila_stlfr)
 
 # Install Aquila_stLFR
-## Install through Bioconda (The updated version 1.2.10):
+## 1.Install through Bioconda (The updated version 1.2.10):
 ```
 conda install aquila_stlfr
 ```
 (Please ensure <a href="https://bioconda.github.io/user/install.html#set-up-channels">channels</a> are properly setup for bioconda before installing) 
+
+#### Run the following commands to download source files:
 ```
 #Download the reference file (GRCh38)
 wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/source.tar.gz
@@ -14,13 +16,16 @@ wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/source.tar.gz
 #Download hg38 "Uniqness_map"
 wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/Uniqness_map.tar.gz
 ```
-## Install through Github:
+## 2.Install through Github:
 ```
 git clone https://github.com/maiziex/Aquila_stLFR.git
 cd Aquila_stLFR
 chmod +x install.sh
 ./install.sh
 ```
+### source folder:
+After running "./install.sh", a folder "source" would be download, it includes human GRCh38 reference fasta file, or you could also just download it by yourself from the corresponding official websites. 
+
 ### Dependencies for Github install:
 Aquila_stLFR utilizes <a href="https://www.python.org/downloads/">Python3 (+ numpy, pysam, and scipy)</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://github.com/lh3/minimap2">minimap2</a>. To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable (".bashrc"). <br />
 Or you could just run "./install.sh" to check their availability and install them if not, but make sure you have installed "python3", "conda" and "wget" first. 
@@ -37,8 +42,7 @@ Aquila_stLFR_fastq_preprocess --help
 
 #  Github:
 
-## source folder:
-After running "./install.sh", a folder "source" would be download, it includes human GRCh38 reference fasta file, or you could also just download it by yourself from the corresponding official websites. 
+
 
 ## Running The Code:
 Put the "Aquila_stLFR/bin" in the ".bashrc" file, and source the ".bashrc" file <br />
