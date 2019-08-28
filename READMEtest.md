@@ -51,11 +51,11 @@ Aquila_stLFR_clean --help
 ```
 Aquila_step1_hybrid --help
 ```
-Assembly_based_variants_call
+<a href="https://github.com/xinzhoucs/Aquila_stLFR/blob/master/Assembly_based_variants_call/README.md/">Assembly_based_variants_call</a>
 ```
 Aquila_stLFR_assembly_based_variants_call --help
 ```
-<a href="https://github.com/maiziex/Aquila_stLFR/blob/master/Assembly_based_variants_call/README.md/">Phasing_all_variants</a>
+<a href="https://github.com/xinzhoucs/Aquila_stLFR/blob/master/Assembly_based_variants_call/README.md/">Phasing_all_variants</a>
 ```
 Aquila_stLFR_phasing_all_variants --help
 ```
