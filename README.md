@@ -15,7 +15,7 @@ Aquila_stLFR_assembly_based_variants_call --help
 Aquila_stLFR_phasing_all_variants --help
 Aquila_step0_sortbam_hybrid --help
 Aquila_stLFR_fastq_preprocess --help
-#Check the below commands for details
+# You can also check the below corresponding scripts for details
 ```
 ```
 #Download the reference file (GRCh38)
