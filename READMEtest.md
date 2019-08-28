@@ -63,7 +63,7 @@ Aquila_stLFR_phasing_all_variants --help
 ```
 Aquila_step0_sortbam_hybrid --help
 ```
-Fastq_preprocess
+<a href="https://github.com/xinzhoucs/Aquila_stLFR/blob/master/src/How_to_get_bam_and_vcf.md">Fastq_preprocess</a>
 ```
 Aquila_stLFR_fastq_preprocess --help
 ```
