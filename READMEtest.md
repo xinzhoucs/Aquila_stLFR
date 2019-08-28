@@ -34,14 +34,30 @@ After running "./install.sh", a folder "source" would be download, it includes h
 # Running The Code:
 ## 1.For Bioconda user:
 Run the following commands to read the detailed instruction or refer to Github user instruction (section below) for further information.
+
+[Step1](#step1)
 ```
 Aquila_stLFR_step1 --help
+```
+```
 Aquila_stLFR_step2 --help
+```
+```
 Aquila_stLFR_clean --help
+```
+```
 Aquila_step1_hybrid --help
+```
+```
 Aquila_stLFR_assembly_based_variants_call --help
+```
+```
 Aquila_stLFR_phasing_all_variants --help
+```
+```
 Aquila_step0_sortbam_hybrid --help
+```
+```
 Aquila_stLFR_fastq_preprocess --help
 ```
 ## 2.For Github user:
@@ -49,7 +65,7 @@ Put the "Aquila_stLFR/bin" in the ".bashrc" file, and source the ".bashrc" file 
 Or just use the fullpath of "**Aquila_stLFR_step1.py**" and "**Aquila_stLFR_step2.py**"
 
 
-### Step 1: 
+### Step 1 <a id=\"step1\"></a>: 
 ```
 Aquila_stLFR/bin/Aquila_stLFR_step1.py --fastq_file S12878.fastq --bam_file S12878.bam --vcf_file S12878_freebayes.vcf --sample_name S12878 --out_dir Assembly_results_S12878 --uniq_map_dir Aquila_stLFR/Uniqness_map
 ```
