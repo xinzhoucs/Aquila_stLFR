@@ -55,15 +55,15 @@ Aquila_step1_hybrid --help
 ```
 Aquila_stLFR_assembly_based_variants_call --help
 ```
-[Step1](#step1)
+Phasing_all_variants
 ```
 Aquila_stLFR_phasing_all_variants --help
 ```
-[Step1](#step1)
+[Step0](#step0)
 ```
 Aquila_step0_sortbam_hybrid --help
 ```
-[Step1](#step1)
+Fastq_preprocess
 ```
 Aquila_stLFR_fastq_preprocess --help
 ```
@@ -181,12 +181,13 @@ Assembly_results_S12878
 ## Final Output Format:
 Aquila_stLFR outputs an overall contig file “Aquila_Contig_chr*.fasta” for each chromosome, and one contig file for each haplotype: “Aquila_Contig_chr*_hp1.fasta” and “Aquila_Contig_chr*_hp2.fasta”. For each contig, the header, for an instance, “>36_PS39049620:39149620_hp1” includes contig number “36”, phase block start coordinate “39049620”, phase block end coordinate “39149620”, and haplotype number “1”. Within the same phase block, the haplotype number “hp1” and “hp2” are arbitrary for maternal and paternal haplotypes. For some contigs from large phase blocks, the headers are much longer and complex, for an instance, “>56432_PS176969599:181582362_hp1_ merge177969599:178064599_hp1-177869599:177969599_hp1”. “56” denotes contig number, “176969599” denotes the start coordinate of the final big phase block, “181582362” denotes the end coordinate of the final big phase block, and “hp1” denotes the haplotype “1”. “177969599:178064599_hp1” and “177869599:177969599_hp1” mean that this contig is concatenated from minicontigs in small chunk (start coordinate: 177969599, end coordinate: 178064599, and haplotype: 1) and small chunk (start coordinate: 177869599, end coordinate: 177969599, and haplotype: 1). 
 
-### Clean Data <a id="clean"></a>
+<a id="clean"></a>
+### Clean Data 
 ##### If your hard drive storage is limited, it is suggested to quily clean some data by running "Aquila_stLFR_clean.py". Or you can keep them for some analysis (check the above output directory tree for details). 
 ```
 Aquila_stLFR/bin/Aquila_stLFR_clean.py --out_dir Assembly_results_S12878 
 ```
-
+<a id="assemblebvc"></a>
 ## Assembly Based Variants Calling and Phasing:
 ##### For example, you can use "Assemlby_results_S12878" as input directory to generate a VCF file which includes SNPs, small Indels and SVs. 
 ##### Please check <a href="https://github.com/maiziex/Aquila_stLFR/blob/master/Assembly_based_variants_call/README.md/">Assembly_based_variants_call_and_phasing</a> for details. 
@@ -201,7 +202,7 @@ wget http://xinzhouneuroscience.org/wp-content/uploads/2019/06/Uniqness_map_hg19
 ##### Or you can use our "Aquila_uniqmap" to generate the "Uniqness_map" folder to run Aquila, check <a href="https://github.com/maiziex/Aquila/blob/master/src/How_to_get_uniqmap_folder.md">How_to_get_Umap</a> for details.
 
 # Hybrid assembly of 10x linked-reads and stLFR:
-
+<a id="step1_hybrid"></a>
 ### Step 1: 
 ```
 Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_file_list S24385_10x_freebayes.vcf,S24385_stLFR_freebayes.vcf --sample_name_list S24385_10x,S24385_stLFR --out_dir Assembly_results_hybrid --uniq_map_dir Aquila_stLFR/Uniqness_map
@@ -229,6 +230,7 @@ Aquila_stLFR/bin/Aquila_step1_hybrid.py --bam_file_list 10x.bam,stLFR.bam --vcf_
 
 ##### --chr_start, --chr_end: if you only want to assembly some chromosomes or only one chromosome. For example: use "--chr_start 1 --chr_end 5"  will assemble chromsomes 1,2,3,4,5. Use "--chr_start 2 --chr_end 2" will only assemlby chromosome 2. 
 (*Notes: Use 23 for "chrX") To use the above option "--chr_start, --chr_end", it is recommended (not required) to run the below command first to save more time for step1. 
+<a id="step0"></a>
 ```
 python Aquila_stLFR/bin/Aquila_step0_sortbam_hybrid.py --bam_file_list ./S24385_Lysis_2/Longranger_align_bam/S24385_lysis_2/outs/possorted_bam.bam,./S24385_Lysis_2H/Longranger_align_bam/S24385_lysis_2H/outs/possorted_bam.bam --out_dir Assembly_results_merged --num_threads_for_samtools_sort 10 --sample_name_list S24385_lysis_2,S24385_lysis_2H 
 ```
