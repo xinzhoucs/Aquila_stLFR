@@ -17,6 +17,11 @@ wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/source.tar.gz
 wget http://xinzhouneuroscience.org/wp-content/uploads/2019/05/Uniqness_map.tar.gz
 ```
 ## 2.Install through Github:
+### Dependencies for Github install:
+Aquila_stLFR utilizes <a href="https://www.python.org/downloads/">Python3 (+ numpy, pysam, and scipy)</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://github.com/lh3/minimap2">minimap2</a>. To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable (".bashrc"). <br />
+Or you could just run "./install.sh" to check their availability and install them if not, but make sure you have installed "python3", "conda" and "wget" first. 
+
+### Run these commands to install:
 ```
 git clone https://github.com/maiziex/Aquila_stLFR.git
 cd Aquila_stLFR
@@ -26,9 +31,7 @@ chmod +x install.sh
 ### source folder:
 After running "./install.sh", a folder "source" would be download, it includes human GRCh38 reference fasta file, or you could also just download it by yourself from the corresponding official websites. 
 
-### Dependencies for Github install:
-Aquila_stLFR utilizes <a href="https://www.python.org/downloads/">Python3 (+ numpy, pysam, and scipy)</a>, <a href="http://samtools.sourceforge.net/">SAMtools</a>, and <a href="https://github.com/lh3/minimap2">minimap2</a>. To be able to execute the above programs by typing their name on the command line, the program executables must be in one of the directories listed in the PATH environment variable (".bashrc"). <br />
-Or you could just run "./install.sh" to check their availability and install them if not, but make sure you have installed "python3", "conda" and "wget" first. 
+
 ```
 Aquila_stLFR_step1 --help
 Aquila_stLFR_step2 --help
