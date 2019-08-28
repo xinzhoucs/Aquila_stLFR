@@ -51,11 +51,11 @@ Aquila_stLFR_clean --help
 ```
 Aquila_step1_hybrid --help
 ```
-[Assembly_based_variants_call](#assemblebvc)
+Assembly_based_variants_call
 ```
 Aquila_stLFR_assembly_based_variants_call --help
 ```
-Phasing_all_variants
+<a href="https://github.com/maiziex/Aquila_stLFR/blob/master/Assembly_based_variants_call/README.md/">Phasing_all_variants</a>
 ```
 Aquila_stLFR_phasing_all_variants --help
 ```
@@ -186,8 +186,8 @@ Aquila_stLFR outputs an overall contig file “Aquila_Contig_chr*.fasta” for e
 ##### If your hard drive storage is limited, it is suggested to quily clean some data by running "Aquila_stLFR_clean.py". Or you can keep them for some analysis (check the above output directory tree for details). 
 ```
 Aquila_stLFR/bin/Aquila_stLFR_clean.py --out_dir Assembly_results_S12878 
-```
-<a id="assemblebvc"></a>
+``` 
+
 ## Assembly Based Variants Calling and Phasing:
 ##### For example, you can use "Assemlby_results_S12878" as input directory to generate a VCF file which includes SNPs, small Indels and SVs. 
 ##### Please check <a href="https://github.com/maiziex/Aquila_stLFR/blob/master/Assembly_based_variants_call/README.md/">Assembly_based_variants_call_and_phasing</a> for details. 
